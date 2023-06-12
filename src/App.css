@@ -3,224 +3,229 @@ body {
 }
 
 .porth1 {
-  color: rgb(130, 9, 9);
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  font-family: system-ui, sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  /* font-size: calc( 1em + 30vmin ); */
-  font-size: xx-large;
-  font-weight: 900;
-  color: tomato;
+      color: rgb(130, 9, 9);
+      font-family: system-ui, sans-serif;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      font-size: xx-large;
+      font-weight: 900;
+      color: tomato;
+      --x-offset: -0.0625em;
+      --y-offset: 0.0625em;
+      --stroke: 0.025em;
+      --background-color: rgb(14, 27, 46);
+      --stroke-color: lightblue;
+      text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+        calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
+    }
 
-  --x-offset: -0.0625em;
-  --y-offset: 0.0625em;
-  --stroke: 0.025em;
-  --background-color: rgb(14, 27, 46);
-  --stroke-color: lightblue;
+    @supports (text-shadow: 1px 1px 1px 1px black) {
+      h1 {
+        text-shadow: var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+          var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+      }
+    }
 
-  text-shadow:
+    .image {
+      display: flex;
+      justify-content: center;
+    }
 
-    var(--x-offset) var(--y-offset) 0px var(--background-color),
+    #image {
+      width: 350px;
+      border-radius: 1000px;
+      border-style: solid;
+      border-color: rgb(130, 9, 9);
+      border-width: 5px;
+    }
 
-    calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
+    .info {
+      display: flex;
+      justify-content: center;
+      text-shadow: 4px 3px 2px rgb(130, 9, 9);
+    }
 
-}
+    .first {
+      border-style: solid;
+      border-color: rgb(130, 9, 9);
+      border-width: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-left: 300px;
+      margin-right: 300px;
+      color: white;
+      margin-top: 30px;
+      margin-bottom: 30px
+    }
 
-@supports (text-shadow: 1px 1px 1px 1px black) {
-  h1 {
-    text-shadow:
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700");
 
-      var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+    .link-boxes,
+    .link-boxes3 {
+      height: 20vh;
+      margin-bottom: 50px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      -webkit-align-items: stretch;
+      align-items: stretch;
+      font-family: "Montserrat";
+      font-weight: 200;
+    }
 
-      var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+    .link-boxes3 {
+      margin-bottom: 150px;
+    }
 
-  }
-}
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+      -ms-flex-preferred-size: 33.33%;
+      -webkit-flex-basis: 33.33%;
+      flex-basis: 33.33%;
+      -webkit-transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
+      -o-transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
+      transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
 
-.image {
-  display: flex;
-  justify-content: center;
+    .box1:hover,
+    .box2:hover,
+    .box3:hover,
+    .box4:hover {
+      -ms-flex-preferred-size: 50%;
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+    }
 
-}
+    .box1:after,
+    .box2:after,
+    .box3:after,
+    .box4:after {
+      content: "";
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
+      -o-transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
+      transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      font-size: 3em;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
 
-#image {
-  width: 350px;
-  border-radius: 1000px;
-  border-style: solid;
-  border-color: rgb(130, 9, 9);
-  border-width: 5px;
-}
+    .box1:after {
+      background-color: rgba(250, 117, 55, 0.72);
+      content: "Tic Tac Toe";
+    }
 
-.info {
-  display: flex;
-  justify-content: center;
-  text-shadow: 4px 3px 2px rgb(130, 9, 9);
+    .box2:after {
+      background-color: rgba(186, 231, 75, 0.68);
+      content: "Story Lane";
+    }
 
-}
+    .box3:after {
+      background-color: rgba(79, 183, 178, 0.67);
+      content: "Quote Generator";
+    }
 
-.first {
-  border-style: solid;
-  border-color: rgb(130, 9, 9);
-  border-width: 5px;
-  /* width: 500px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  /* height: 100vh; Adjust this value based on your requirements */
-  margin-left: 300px;
-  margin-right: 300px;
-  color: white;
-  margin-top: 30px;
-  margin-bottom: 30px
-}
+    .box4:after {
+      background-color: rgba(79, 183, 178, 0.67);
+      content: "RASA";
+    }
 
-/* //.....// */
+    .box1:hover:after,
+    .box2:hover:after,
+    .box3:hover:after,
+    .box4:hover:after {
+      opacity: 1;
+    }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700");
+    .box1:hover:after,
+    .box2:hover:after,
+    .box3:hover:after,
+    .box4:hover:after {
+      background: none;
+    }
 
-.link-boxes,
-.link-boxes3{
-  height: 20vh;
-  margin-bottom: 50px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  font-family: "Montserrat";
-  font-weight: 200;
-}
+    .projects {
+      display: flex;
+      justify-content: center;
+      color: white;
+      text-shadow: 20px white;
+      font-size: xx-large;
+      margin-bottom: 20px;
+      text-shadow: 5px 5px #558ABB;
+    }
 
-.link-boxes3{
-  margin-bottom: 150px;
-}
+    /* Responsive Styles */
 
-.box1,
-.box2,
-.box3,
-.box4 {
-  -ms-flex-preferred-size: 33.33%;
-  -webkit-flex-basis: 33.33%;
-  flex-basis: 33.33%;
-  -webkit-transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
-  transition: 0.5s flex-basis cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover
-}
+    @media (max-width: 768px) {
+      .first {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
 
-.box1:hover,
-.box2:hover,
-.box3:hover,
-.box4:hover {
-  -ms-flex-preferred-size: 50%;
-  -webkit-flex-basis: 50%;
-  flex-basis: 50%;
-}
+    @media (max-width: 576px) {
+      .first {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
 
-.box1:after,
-.box2:after,
-.box3:after,
-.box4:after {
-  content: "";
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
-  transition: 0.5s background-color cubic-bezier(0.23, 1, 0.32, 1);
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  font-size: 3em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-}
-
-.box1:after {
-  background-color: rgba(250, 117, 55, 0.72);
-  content: "Tic Tac Toe";
-}
-
-.box2:after {
-  background-color: rgba(186, 231, 75, 0.68);
-  content: "Story Lane";
-}
-
-.box3:after {
-  background-color: rgba(79, 183, 178, 0.67);
-  content: "Quote Generator";
-}
-
-.box4:after {
-  background-color: rgba(79, 183, 178, 0.67);
-  content: "RASA";
-}
-
-.box1:hover:after,
-.box2:hover:after,
-.box3:hover:after,
-.box4:hover:after {
-  opacity: 1;
-}
-
-.box1:hover:after,
-.box2:hover:after,
-.box3:hover:after,
-.box4:hover:after {
-  background: none;
-}
-
-.projects {
-  display: flex;
-  justify-content: center;
-  color: white;
-  text-shadow: 20px white;
-  font-size: xx-large;
-  margin-bottom: 20px;
-  text-shadow: 5px 5px #558ABB;
-}
+    @media (max-width: 400px) {
+      .first {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+    }
 
 
 /* //...footer...// */
